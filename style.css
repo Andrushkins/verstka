@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('./fonts/Roboto/Thin/Roboto-Thin.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Roboto/Thin/Roboto-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Roboto/Thin/Roboto-Thin.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/Roboto/Thin/Roboto-Thin-clean.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/Roboto/Thin/Roboto-Thin.svg#e6a7f8a2f42cc35979973da8dfb10720') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('./fonts/Roboto/Light/Roboto-Light.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Roboto/Light/Roboto-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Roboto/Light/Roboto-Light.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/Roboto/Light/Roboto-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/Roboto/Light/Roboto-Light.svg#14cfc794995ce651ee6fc06de48ff027') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('./fonts/Roboto/Bold/Roboto-Bold.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Roboto/Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Roboto/Bold/Roboto-Bold.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/Roboto/Bold/Roboto-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/Roboto/Bold/Roboto-Bold.svg#b49e654214c0ade376e714f6d9c78d72') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 300px;
+  margin-top: 100px;
+}
+
+#container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'PT Sans Caption', sans-serif;
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.heading:after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  bottom: -25px;
+}
+
+.poster {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 980px;
+  max-height: 620px;
+  height: 100%;
+  margin: 0 auto;
+  border: 9px solid black;
+  box-shadow: inset 3px 10px 5px rgba(0,0,0,0.5), 11px 14px 14px rgba(0,0,0,0.5);
+}
+
+.poster_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.poster_container > img {
+  margin-right: 30px;
+}
+
+.poster_heading {
+  font-family: 'Roboto Thin';
+  font-size: 64px;
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.poster_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Light';
+  font-size: 16px;
+  line-height: 2;
+}
+
+.poster_info > p {
+  max-width: 274px;
+  max-height: 150px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.poster > img {
+  max-width: 590px;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Roboto Light';
+  margin-top: 55px;
+}
+
+.about > p {
+  font-size: 14px;
+  width: 33%;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.social > div {
+  width: 45px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.social > div:first-of-type {
+  margin-right: 40px;
+}
+
+.social > div > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  display: block;
+  max-width: 25px;
+}
+
+.text {
+  font-family: 'Forum';
+  font-size: 36px;
+  margin-bottom: 60px;
+  line-height: 1;
+}
+
+.group_2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+.left_col {
+  border-right: 1px solid black;
+  height: 100%;
+  margin-right: 20px;
+  margin-top: 70px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.left_col > p {
+  text-align: right;
+  font-family: 'Roboto Light';
+  font-size: 18px;
+  line-height: 1.5;
+  margin-right: 20px;
+  max-width: 435px;
+  float: right;
+}
+
+.right_col {
+  width: 100%;
+  max-width: 760px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.pavel_quote {
+  margin-top: 60px;
+  font-size: 36px;
+  font-family: 'Forum'
+}
+
+.quote {
+  text-align: right;
+  border-right: 1px solid grey;
+  color: #C9320F;
+  font-size: 30px;
+  padding-right: 30px;
+  margin-right: 100px;
+}
+
+.img_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large_pic {
+  max-width: 680px;
+  width: 100%;
+  display: block;
+  margin-right: 100px;
+}
+
+.small_pic {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  font-family: 'Roboto Light';
+  font-size: 14px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+
+.small_pic > p {
+  margin-top: 80px;
+  border-left: 2px solid grey;
+  padding-left: 20px;
+  height: 70px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.quote_box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.left_quote {
+  border-right: 2px solid grey;
+  padding-right: 20px;
+  width: 32%;
+  margin-right: 20px;
+}
+
+.left_quote > p {
+  margin: 0;
+}
+
+.right_quote > p {
+  margin: 0;
+}
+
+.right_quote {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.about_footer {
+  margin-top: 80px;
+  border-right: 2px solid grey;
+  float: right;
+  padding-right: 20px;
+  height: 115px;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Roboto Light';
+  font-size: 14px;
+  text-align: right;
+  line-height: 1.5;
+}
