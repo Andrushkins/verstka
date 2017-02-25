@@ -34,14 +34,13 @@
   font-weight:  700;
 }
 
-
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 300px;
-  margin-top: 100px;
+  padding-top: 100px;
+  margin: 0;
 }
 
 #container {
@@ -56,6 +55,7 @@ body {
   font-family: 'PT Sans Caption', sans-serif;
   position: relative;
   margin-bottom: 65px;
+  letter-spacing: 1px;
 }
 
 .heading:after {
@@ -73,22 +73,22 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
-  width: 100%;
-  max-width: 980px;
-  max-height: 620px;
+  max-width: 920px;
   height: 100%;
   margin: 0 auto;
   border: 9px solid black;
-  box-shadow: inset 3px 10px 5px rgba(0,0,0,0.5), 11px 14px 14px rgba(0,0,0,0.5);
+  box-shadow: inset 3px 10px 5.5px rgba(0,0,0,0.6), 3px 8px 5px rgba(0,0,0,0.5);
 }
 
 .poster_container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .poster_container > img {
   margin-right: 30px;
+  width: auto;
 }
 
 .poster_heading {
@@ -101,12 +101,9 @@ body {
 }
 
 .poster_info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Roboto Light';
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.9;
 }
 
 .poster_info > p {
@@ -131,7 +128,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: 'Roboto Light';
-  margin-top: 55px;
+  margin-top: 35px;
 }
 
 .about > p {
@@ -145,7 +142,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
-  margin-top: 60px;
+  margin-top: 45px;
 }
 
 .social > div {
@@ -179,7 +176,8 @@ body {
 
 .group_2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
 }
 
 
@@ -190,16 +188,17 @@ body {
   margin-top: 70px;
   max-width: 480px;
   width: 100%;
+  text-align: right;
 }
 
 .left_col > p {
-  text-align: right;
   font-family: 'Roboto Light';
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-right: 20px;
   max-width: 435px;
   float: right;
+  margin-bottom: 15px;
 }
 
 .right_col {
@@ -219,19 +218,29 @@ img {
   font-family: 'Forum'
 }
 
+.pavel_name {
+  margin: 0;
+  padding-left: 100px;
+}
+
 .quote {
   text-align: right;
-  border-right: 1px solid grey;
+  border-right: 2px solid grey;
   color: #C9320F;
   font-size: 30px;
   padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-right: 100px;
+  margin-top: 0px;
+  line-height: 1;
 }
 
 .img_block {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .large_pic {
@@ -269,7 +278,20 @@ img {
   margin-top: 60px;
 }
 
-.left_quote {
+.quote_box_mobile {
+  display: none;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  margin-top: 45px;
+}
+
+.quote_box_mobile > p {
+  margin: 0;
+}
+
+.quote_box > .left_quote {
   border-right: 2px solid grey;
   padding-right: 20px;
   width: 32%;
@@ -294,11 +316,107 @@ img {
   border-right: 2px solid grey;
   float: right;
   padding-right: 20px;
-  height: 115px;
   display: table-cell;
   vertical-align: middle;
   font-family: 'Roboto Light';
   font-size: 14px;
   text-align: right;
   line-height: 1.5;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 425px) {
+  .poster_heading {
+    font-size: 34px;
+    margin-top: 45px;
+  }
+
+  .poster_info {
+    margin-top: 45px;
+  }
+
+  .text {
+    font-size: 30px;
+    margin-bottom: 45px;
+  }
+
+  .poster_container {
+    display: block;
+    justify-content: flex-start;
+  }
+
+  .poster_container > img {
+    width: 100%;
+  }
+
+  .social {
+    margin-top: 40px;
+    margin-bottom: 45px;
+  }
+
+  #container {
+    width: 90%;
+  }
+
+  .group_2 {
+    display: block;
+  }
+
+  .left_col {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .left_col > p {
+    margin-bottom: 10px;
+  }
+
+  .pavel_quote {
+    margin-top: 35px;
+  }
+
+  .pavel_name {
+    margin: 0; padding-left: 0px;
+  }
+
+  .quote {
+    text-align: left;
+    border: none;
+    margin-right: 0px;
+    padding-right: 0px;
+    margin-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+
+  .img_block {
+    display: block;
+    margin-top: 45px;
+  }
+
+  .small_pic {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .quote_box {
+    margin-top: 45px;
+    display: none;
+  }
+
+  .quote_box_mobile {
+    display: block;
+  }
+
+  .about_footer {
+    margin-top: 45px;
+  }
+
 }
