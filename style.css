@@ -129,6 +129,31 @@ body {
   display: block;
 }
 
+.poster_mobile {
+  display: none;
+}
+
+.poster_mobile > .poster_container {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  border: 9px solid black;
+  box-shadow:
+    inset 4px 10px 7px rgba(0,0,0,0.6),
+    3px 8px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow:
+    inset 4px 10px 7px rgba(0,0,0,0.6),
+    3px 8px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow:
+    inset 4px 10px 7px rgba(0,0,0,0.6),
+    3px 8px 5px rgba(0,0,0,0.5);
+}
+
+.poster_mobile > .poster_info > p {
+  border: none;
+  border-left: 1px solid grey;
+}
+
 .about {
   display: flex;
   justify-content: center;
@@ -350,6 +375,14 @@ img {
 /* MEDIA QUERIES*/
 
 @media (max-width: 425px) {
+  .poster {
+    display: none;
+  }
+
+  .poster_mobile {
+    display: block;
+  }
+
   .poster_heading {
     font-size: 34px;
     margin-top: 45px;
