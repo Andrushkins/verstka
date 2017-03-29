@@ -81,9 +81,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 300px;
-  padding-top: 100px;
-  margin: 0;
 }
 
 #container {
@@ -152,6 +149,10 @@ body {
   line-height: 1;
 }
 
+.poster_info_mobile {
+  display: none;
+}
+
 .poster_info {
   font-family: 'Roboto Light';
   font-size: 16px;
@@ -190,11 +191,6 @@ body {
   -webkit-box-shadow:
     inset 4px 10px 7px rgba(0,0,0,0.6),
     3px 8px 5px rgba(0,0,0,0.5);
-}
-
-.poster_mobile > .poster_info > p {
-  border: none;
-  border-left: 1px solid grey;
 }
 
 .about {
@@ -299,7 +295,9 @@ img {
 
 .pavel_name {
   margin: 0;
-  padding-left: 100px;
+  text-align: right;
+  color: black;
+  font-size: 36px;
 }
 
 .quote {
@@ -395,9 +393,7 @@ img {
 .about_footer {
   margin-top: 80px;
   border-right: 1px solid black;
-  float: right;
   padding-right: 20px;
-  display: table-cell;
   vertical-align: middle;
   font-family: 'Roboto Light';
   font-size: 14px;
@@ -418,9 +414,9 @@ img {
 /* MEDIA QUERIES*/
 
 @media (max-width: 425px) {
-  .poster {
+  /*.poster {
     display: none;
-  }
+  }*/
 
   .poster_mobile {
     display: block;
@@ -432,7 +428,27 @@ img {
   }
 
   .poster_info {
+    display: none;
     margin-top: 45px;
+  }
+
+  .poster_info > p {
+    border: none;
+    border-left: 1px solid grey;
+  }
+
+  .poster_info_mobile {
+    display: block;
+    margin-top: 45px;
+    font-family: 'Roboto Light';
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    border-left: 1px solid grey;
+  }
+
+  .poster_info_mobile > p {
+    margin-left: 15px;
   }
 
   .text {
